@@ -12,9 +12,9 @@
 
 .global _start
 
-_start:	LDR X3, =input
+_start:	LDR X3, =input // Point to input string.
 		MOV X5, #0 // Clear X5.
-do:		LDRB W4, [X3], #1 // Load a character.
+do:		LDRB W4, [X3], #1 // Load a character and increment pointer.
 
 		CMP X4, #43 // Compare if +
 		B.EQ end
@@ -33,7 +33,7 @@ end:	LDR X1, =output
 		STRB W5, [X1] // Store the sum.
 
 		MOV X0, #1 // Write to stdout.
-		LDR X1, =output
+		LDR X1, =output // Point to output string.
 		MOV X2, #14 // Write 14 byte.
 		MOV X8, #64 // Linux write function.
 		SVC #0 // Make linux system call.
