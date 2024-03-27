@@ -1,7 +1,8 @@
 .global _start
 
 // First 64 bits
-_start:	MOV	X2, #0x0000000000000003
+_start:
+	MOV	X2, #0x0000000000000003
 	MOV	X3, #0xFFFFFFFFFFFFFFFF
 
 // Seconds 64 bits

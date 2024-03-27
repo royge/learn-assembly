@@ -11,8 +11,8 @@ _start:
 	MOV X6, #0x0000000000000002
 
 	// Subtract first 64-bit.
-	SUBS X1, X3, X5
-	SBC X0, X4, X6
+	SUBS X1, X3, X5 // X1 = X3 - X5
+	SBC X0, X4, X6 // X0 = X4 - X6 - CARRY
 
 // Exit the program
 	MOV X8, #93

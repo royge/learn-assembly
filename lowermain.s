@@ -18,5 +18,5 @@ _start:
 	SVC #0 // Make linux system call.
 
 .data
-	input:	.asciz "The quick brown fox!\n"
+	input:	.asciz "The quick brown fox JUMPS OVER THE LAZY DOG!\n"
 	result:	.fill 255, 1, 0

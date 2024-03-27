@@ -1,7 +1,7 @@
 .global _start
 
 _start:
-	LDR X1, =arr1
+	LDR X1, =arr1 // Load the address of arr1 into X1.
 
 	LDR W2, [X1, #(0 * 2)]
 	AND W2, W2, #0x0000FFFF		// Mask the high 16 bits.
